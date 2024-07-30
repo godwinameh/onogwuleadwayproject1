@@ -1,0 +1,32 @@
+:root {
+  --bg-color: #e5e5e5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 6.5px;
+}
+
+@media screen and (min-width: 1590px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: var(--bg-color);
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button {
+  cursor: pointer;
+}

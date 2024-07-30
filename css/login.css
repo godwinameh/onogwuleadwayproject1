@@ -1,0 +1,312 @@
+
+:root {
+  --bg-color: #e5e5e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: var(--bg-color);
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 6.5px;
+}
+
+@media screen and (min-width: 1590px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+.body-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-block: 2rem;
+}
+
+.container_all {
+  width: 100%;
+  max-width: 144rem;
+  height: 90%;
+  display: flex;
+  max-height: 102.4rem;
+}
+
+.left {
+  background-color: #fffbf6;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 45%;
+  padding-inline: 8rem;
+  padding-top: 6rem;
+}
+
+.left .logo {
+  width: 10.8rem;
+  height: 13.6rem;
+}
+
+.right {
+  width: 55%;
+  position: relative;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-block: 3rem;
+}
+
+.title-container h1 {
+  color: #585858;
+  font-size: 4.2rem;
+}
+
+.title-container p {
+  font-size: 1.8rem;
+  color: #afb0b1;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+}
+
+.form-group > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: black;
+}
+
+.form-group div input {
+  width: 100%;
+  font-weight: 400;
+  color: #afb0b1;
+  border: none;
+  outline: none;
+}
+
+.form-group div:last-child {
+  display: flex;
+}
+
+.form-group div input::placeholder {
+  width: 100%;
+  color: #afb0b1;
+  font-family: inherit;
+}
+
+.form-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.show {
+  color: #ee5331;
+  border: none;
+  background-color: transparent;
+}
+
+.log-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-point p {
+  color: #7f8b94;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.log-point {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #ff7a00;
+  color: white;
+  padding: 16px;
+  border-radius: 7px;
+  border: none;
+}
+
+.help-cont {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  align-items: center;
+}
+
+.help-cont button {
+  background-color: transparent;
+  border: none;
+  width: 10rem;
+}
+
+.customer-mgmt {
+  position: absolute;
+  bottom: 4rem;
+  left: 6rem;
+  background-color: white;
+  display: flex;
+  gap: 2rem;
+  border-radius: 0.8rem;
+  max-width: 82%;
+}
+
+.icon-image {
+  width: 17rem;
+  border-radius: 0.8rem;
+  background-color: #f3f5f6;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-image img {
+  width: 7.2rem;
+  height: 7.2rem;
+}
+
+.customer-mgmt div:last-child {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.customer-mgmt div h3 {
+  color: #585858;
+  font-weight: bold;
+  font-size: 1.9rem;
+}
+
+.customer-mgmt div p {
+  color: #585858;
+  font-size: 1.6rem;
+}
+
+.checkbox-wrapper-1 *,
+.checkbox-wrapper-1 ::after,
+.checkbox-wrapper-1 ::before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-1 [type="checkbox"].substituted {
+  margin: 0;
+  width: 0;
+  height: 0;
+  display: inline;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-wrapper-1 [type="checkbox"].substituted + label:before {
+  content: "";
+  display: inline;
+  vertical-align: top;
+  height: 1.15em;
+  width: 1.15em;
+  margin-right: 0.6em;
+  color: rgba(0, 0, 0, 0.275);
+  border: solid 0.06em;
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset,
+    0 0 0 0.07em transparent inset;
+  border-radius: 0.2em;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="rgba(0,0,0,0)" viewBox="0 0 48 48"><path d="M 17.6 36.8 c -0.4 0 -0.8 -0.1 -1.2 -0.4 c -0.6 -0.3 -1 -0.9 -1.2 -1.5 c -0.2 -0.6 -0.1 -1.3 0.3 -1.8 l 8.1 -9.9 c 0.6 -0.8 1.7 -0.8 2.3 0 l 8.1 9.9 c 0.4 0.5 0.5 1.2 0.3 1.8 s -0.6 1.2 -1.2 1.5 s -1.3 0.3 -1.8 -0.3 l -6.9 -8.4 l -6.9 8.4 C 18.6 36.6 18.1 36.8 17.6 36.8 z"/></svg>'),
+    none, linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background-clip: padding-box, border-box, border-box;
+  background-origin: padding-box, border-box, border-box;
+}
+
+.checkbox-wrapper-1 [type="checkbox"].substituted + label:hover:before {
+  box-shadow: 0 0 0.04em 0.06em, 0 0.06em 0.16em -0.03em inset,
+    0 0 0 0.07em transparent inset;
+}
+
+.checkbox-wrapper-1 [type="checkbox"].substituted:checked + label:before {
+  color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0.275);
+  box-shadow: 0 0 0.04em 0.06em, 0 0.06em 0.16em -0.03em inset,
+    0 0 0 0.07em transparent inset;
+  background-color: #ee5331;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="rgba(255,255,255,1)" viewBox="0 0 48 48"><path d="M 17.6 36.8 c -0.4 0 -0.8 -0.1 -1.2 -0.4 c -0.6 -0.3 -1 -0.9 -1.2 -1.5 c -0.2 -0.6 -0.1 -1.3 0.3 -1.8 l 8.1 -9.9 c 0.6 -0.8 1.7 -0.8 2.3 0 l 8.1 9.9 c 0.4 0.5 0.5 1.2 0.3 1.8 s -0.6 1.2 -1.2 1.5 s -1.3 0.3 -1.8 -0.3 l -6.9 -8.4 l -6.9 8.4 C 18.6 36.6 18.1 36.8 17.6 36.8 z"/></svg>'),
+    none, linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+  background-clip: padding-box, border-box, border-box;
+  background-origin: padding-box, border-box, border-box;
+}
+
+.checkbox-wrapper-1 [type="checkbox"].substituted + label {
+  cursor: pointer;
+  display: inline-block;
+  padding-inline-end: 0.6em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.checkbox-wrapper-1 [type="checkbox"].substituted:checked + label:hover:before {
+  box-shadow: 0 0 0.04em 0.06em, 0 0.06em 0.16em -0.03em inset,
+    0 0 0 0.07em transparent inset;
+}
+
+@media screen and (max-width: 768px) {
+  .container_all {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .right {
+    display: none;
+  }
+}

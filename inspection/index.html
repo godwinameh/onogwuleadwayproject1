@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inspection</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <!-- <link rel="stylesheet" href="/inspection/css/styles.css" />  -->
+        <link rel="stylesheet" href="/inspection/css/inspection.css" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="nav-icons">
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon1.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon2.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon3.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon4.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon5.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon6.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+            </div>
+            <div class="inner-sidebar">
+                <div class="logo">
+                    <img
+                        src="/inspection/assets/images/logo.svg"
+                        alt="Leadway Assurance"
+                    />
+                </div>
+                <h2 class="trm">TRM</h2>
+                <ul>
+                    <li>
+                        <a href="" id="overview-btn">
+                            <img
+                                src="/inspection/assets/images/overview.svg"
+                                alt=""
+                            />Overview
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="request-btn" class="active">
+                            <img
+                                src="/inspection/assets/images/request.svg"
+                                alt=""
+                            />Request
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-nav">
+                <div>
+                    <img
+                        src="/inspection/assets/images/bell.svg"
+                        class="bell"
+                        alt=""
+                    />
+                    <div class="avatar">
+                        <h2>AM</h2>
+                    </div>
+                    <div class="account-info">
+                        <p>Adesola</p>
+                        <img
+                            src="/inspection/assets/images/arrow.svg"
+                            class="arrow"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <header>
+                <div class="head-span">
+                    <h1 class="head-welcome">Inspection List</h1>
+                    <p class="txt-para">
+                        See inspection across all business classes
+                    </p>
+                </div>
+                <button class="inspection-btn" id="inspection-btn">
+                    + &nbsp; Create New Inspection
+                </button>
+            </header>
+
+            <div class="inspections">
+                <div class="main-insp">
+                    <div class="status-insp">
+                        <button id="all-requests-btn">All Requests</button>
+                        <button id="ongoing-btn">Ongoing</button>
+                        <button id="completed-btn">Completed</button>
+                    </div>
+                    <div class="top-insp">
+                        <div class="top-search">
+                            <img
+                                src="/inspection/assets/images/search.svg"
+                                class="search-icon"
+                                alt=""
+                            /><input type="text" placeholder="Search" />
+                        </div>
+                        <div class="filter">
+                            <div class="mar-insp">
+                                <button>
+                                    <img
+                                        src="/inspection/assets/images/mardot.svg"
+                                        alt=""
+                                    />
+                                    &nbsp; Marine &nbsp;
+                                    <img
+                                        src="/inspection/assets/images/marcancel.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <div class="sort-insp">
+                                <div class="sort-class">
+                                    <label for="sortby">Sort by:</label>
+                                    <select name="" id="sub">
+                                        <option value="Class">Class</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="all-requests-table" class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Date
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Name
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Inspection method
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Officer
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Status
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10321</td>
+                                <td>15/06/2023</td>
+                                <td>Rovenheights Properties</td>
+                                <td>Digital</td>
+                                <td>Mustapha Onasanya</td>
+                                <td>
+                                    <button
+                                        class="ongoing"
+                                        id="ongoing-table-btn"
+                                    >
+                                        Ongoing
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10321</td>
+                                <td>15/06/2023</td>
+                                <td>Shoprite Stores</td>
+                                <td>Manual</td>
+                                <td>Mustapha Onasanya</td>
+                                <td>
+                                    <button class="completed">Completed</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div
+                    id="ongoing-table"
+                    class="table-container"
+                    style="display: none"
+                >
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Date
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Name
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Inspection method
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Officer
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Status
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10321</td>
+                                <td>15/06/2023</td>
+                                <td>Rovenheights Properties</td>
+                                <td>Digital</td>
+                                <td>Mustapha Onasanya</td>
+                                <td>
+                                    <button class="ongoing">Ongoing</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10321</td>
+                                <td>15/06/2023</td>
+                                <td>Shoprite Stores</td>
+                                <td>Manual</td>
+                                <td>Mustapha Onasanya</td>
+                                <td>
+                                    <button class="ongoing">Ongoing</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div
+                    id="completed-table"
+                    class="table-container"
+                    style="display: none"
+                >
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Date
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Name
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Inspection method
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Officer
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                                <th>
+                                    Status
+                                    <img
+                                        src="/inspection/assets/images/updown-arr.svg"
+                                        alt=""
+                                    />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10321</td>
+                                <td>15/06/2023</td>
+                                <td>Rovenheights Properties</td>
+                                <td>Manual</td>
+                                <td>Mustapha Onasanya</td>
+                                <td>
+                                    <button class="completed">Completed</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10321</td>
+                                <td>12/06/2023</td>
+                                <td>Shoprite Stores</td>
+                                <td>Manual</td>
+                                <td>Mustapha Onasanya</td>
+                                <td>
+                                    <button class="completed">Completed</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="/inspection/inspection.js"></script>
+    </body>
+</html>

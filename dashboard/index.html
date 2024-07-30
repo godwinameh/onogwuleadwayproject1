@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"rel="stylesheet"/>
+        <link rel="stylesheet" href="/dashboard/styles.css" />
+        <style>
+            body {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .menu-btn {
+        display: inline-block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: #333;
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar h2 {
+        font-size: 1.2rem;
+    }
+
+    .head-span h1 {
+        font-size: 1.5rem;
+    }
+
+    .head-span p {
+        font-size: 0.9rem;
+    }
+
+    .stats-card {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .activity ul li {
+        font-size: 0.9rem;
+    }
+
+    .inspections table th,
+    .inspections table td {
+        font-size: 0.8rem;
+    }
+
+    .inspection-btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="nav-icons">
+                <div class="icon-nav">
+                    <img
+                        src="/dashboard/assets/images/icon1.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/dashboard/assets/images/icon2.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/dashboard/assets/images/icon3.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/dashboard/assets/images/icon4.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/dashboard/assets/images/icon5.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/dashboard/assets/images/icon6.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+            </div>
+            <div class="inner-sidebar">
+                <!-- <button id="close-btn" class="close-btn">X</button> -->
+                <div class="logo">
+                    <a href="/dashboard/index.html"><img
+                        src="/dashboard/assets/images/logo.svg"
+                        alt="Leadway Assurance"
+                    /></a>
+                </div>
+                <h2 class="trm">TRM</h2>
+                <ul>
+                    <li>
+                        <a href="" id="overview-btn" class="active">
+                            <img
+                                src="/dashboard/assets/images/overview.svg"
+                                alt=""
+                            />Overview</a
+                        >
+                    </li>
+                    <li>
+                        <a href="" id="request-btn">
+                            <img
+                                src="/dashboard/assets/images/request.svg"
+                                alt=""
+                            />Request</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-nav">
+                <!-- hamburger menu -->
+                <button id="menu-btn" class="menu-btn">&#9776;</button> 
+                <div>
+                    <img
+                        src="/dashboard/assets/images/bell.svg"
+                        class="bell"
+                        alt=""
+                    />
+                    <div class="avatar">
+                        <h2>AM</h2>
+                    </div>
+                    <div class="account-info">
+                        <p>Adesola</p>
+                        <img
+                            src="/dashboard/assets/images/arrow.svg"
+                            class="arrow"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <header>
+                <div class="head-span">
+                    <h1 class="head-welcome">Welcome, Olufemi</h1>
+                    <p class="txt-para">
+                        Take a look at your dashboard and see all pending tasks
+                    </p>
+                </div>
+                <button class="inspection-btn" id="inspection-btn">
+                    + &nbsp; Create New Inspection
+                </button>
+            </header>
+
+            <div class="grid-container">
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <img
+                            class="stats-icon"
+                            src="/dashboard/assets/images/cardblue.svg"
+                            alt="icon"
+                        />
+                    </div>
+                    <div class="stats-card">
+                        <img
+                            class="stats-icon"
+                            src="/dashboard/assets/images/cardgreen.svg"
+                            alt="icon"
+                        />
+                    </div>
+                    <div class="stats-card">
+                        <img
+                            class="stats-icon"
+                            src="/dashboard/assets/images/cardorange.svg"
+                            alt="icon"
+                        />
+                    </div>
+                    <div class="stats-card">
+                        <img
+                            class="stats-icon"
+                            src="/dashboard/assets/images/cardred.svg"
+                            alt="icon"
+                        />
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="top">
+                        <h2>Activity</h2>
+                        <div class="top-v">
+                            <p>View all</p>
+                            <img
+                                src="/dashboard/assets/images/f-arrow.svg"
+                                class="v-arrow"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            You have a property inspection coming up in three
+                            days
+                            <a href="#">Set reminder</a>
+                        </li>
+                        <li>
+                            Mustapha Onasanya sent a new property inspection for
+                            Ravenheight homes <a href="#">See inspection</a>
+                        </li>
+                        <li>
+                            Your scheduled inspection for Gig Logistics is three
+                            days overdue
+                            <a href="#">Re-schedule now</a>
+                        </li>
+                        <li>
+                            Mustapha Onasanya sent a new property inspection for
+                            Ravenheight homes <a href="#">See inspection</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inspections">
+                <h2>Created Inspections</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Inspection method</th>
+                            <th>Officer</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10321</td>
+                            <td>GIG Logistics</td>
+                            <td>Marine</td>
+                            <td>Digital</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <button class="quote">QUOTE REQUEST</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10322</td>
+                            <td>Shoprite Stores</td>
+                            <td>Property</td>
+                            <td>Manual</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <button class="completed">Completed</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>10322</td>
+                            <td>Abiodun Abayomi</td>
+                            <td>Motors</td>
+                            <td>Digital</td>
+                            <td>Mustapha Onasanya</td>
+                            <td><button class="ongoing">Ongoing</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>10322</td>
+                            <td>Ben's Agro Allied</td>
+                            <td>Agric</td>
+                            <td>Manual</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <button class="engineer">
+                                    SENT TO ENGINEER
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>10322</td>
+                            <td>Abiodun Abayomi</td>
+                            <td>Bond</td>
+                            <td>Digital</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <button class="link-expired">
+                                    Link expired
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>10322</td>
+                            <td>Julius Berger</td>
+                            <td>Engineering</td>
+                            <td>Digital</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <button class="inspection-link">
+                                    Inspection link
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>10322</td>
+                            <td>Abiodun Abayomi</td>
+                            <td>Agric</td>
+                            <td>Digital</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <button class="completed">Completed</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/dashboard/js/dashboard.js"></script>
+    </body>
+</html>

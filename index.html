@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underwriter dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body class="body-wrap">
+    <div class="container_all">
+      <div class="left">
+        <div class="logo">
+          <img src="/assets/images/logo.svg" alt="" />
+        </div>
+        <div class="text-container">
+          <h1>Underwriter Dashboard</h1>
+          <p>Welcome, Login to your portal account.</p>
+        </div>
+        <form action="/dashboard/index.html" method="GET`">
+          <div class="form-group">
+            <label for="loginId">Login ID</label>
+            <div>
+              <input
+                type="text"
+                placeholder="enter your login ID"
+                id="loginId"
+                required
+              />
+              <div class="form-icon">
+                <img src="assets/images/user.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div>
+              <label for="">Password</label>
+              <button class="show" id="togglePassword">show</button>
+            </div>
+            <div>
+              <input
+                type="password"
+                required
+                placeholder="enter your password "
+                id="password"
+              />
+              <div class="form-icon">
+                <img src="assets/images/password.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="checkbox">
+            <div class="log-point">
+              <div class="checkbox-wrapper-1">
+                <input
+                  id="example-1"
+                  class="substituted"
+                  type="checkbox"
+                  aria-hidden="true"
+                />
+                <label for="example-1">Keep me logged in</label>
+              </div>
+
+              <p></p>
+              <p>Reset Password</p>
+            </div>
+          </div>
+          <button class="btn-login" type="submit">Login</button>
+        </form>
+      </div>
+      <div class="right">
+        <div class="help-cont">
+          <button>
+            <img src="assets/images/help.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="customer-mgmt">
+          <div class="icon-image">
+            <img
+              src="assets/images/customer_mgt.svg"
+              alt="customer management image"
+            />
+          </div>
+          <div>
+            <h3>Customer Management</h3>
+            <p>
+              Manage all customers from individual customers to corporate or
+              group customers.
+            </p>
+          </div>
+        </div>
+
+        <img src="assets/images/side_login.svg" alt="" />
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

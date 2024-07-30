@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ongoing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="/inspection/css/styles.css" />
+    <link rel="stylesheet" href="/ongoing/css/ongoing.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    timelineItems.forEach((item) => {
+        item.addEventListener("mouseover", function () {
+            timelineItems.forEach((i) => i.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+});
+    </script>
+    <style>
+        /* additional css */
+body {
+font-family: 'Mulish', sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.sidebar {
+width: 250px;
+background-color: #333;
+color: #fff;
+height: 100vh;
+position: fixed;
+left: 0;
+top: 0;
+overflow: auto;
+transition: transform 0.3s ease-in-out;
+}
+
+.main-content {
+margin-left: 250px;
+padding: 20px;
+flex: 1;
+transition: margin-left 0.3s ease-in-out;
+}
+.top-nav{
+    position: fixed;
+    top: 0;
+    /* left: 250px; */
+    right: 0;
+    /* background-color: #ffdebf; */
+    z-index: 1000;
+    padding: 10px 20px;
+
+}
+
+.menu-btn {
+display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+.sidebar {
+transform: translateX(-100%);
+}
+
+.main-content {
+margin-left: 0;
+}
+
+.menu-btn {
+display: inline-block;
+position: fixed;
+top: 15px;
+left: 15px;
+background: #333;
+color: #fff;
+border: none;
+font-size: 20px;
+padding: 10px 15px;
+cursor: pointer;
+}
+
+.sidebar.active {
+transform: translateX(0);
+}
+}
+
+@media (max-width: 480px) {
+.avatar h2 {
+font-size: 1.2rem;
+}
+
+.head-span h1 {
+font-size: 1.5rem;
+}
+
+.head-span p {
+font-size: 0.9rem;
+}
+.timeline{
+  display: flex;
+  flex-direction: column;
+}
+}
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="nav-icons">
+        <div class="icon-nav">
+          <img
+            src="/inspection/assets/images/icon1.svg"
+            alt=""
+            class="side-icons"
+          />
+        </div>
+        <div class="icon-nav">
+          <img
+            src="/inspection/assets/images/icon2.svg"
+            alt=""
+            class="side-icons"
+          />
+        </div>
+        <div class="icon-nav">
+          <img
+            src="/inspection/assets/images/icon3.svg"
+            alt=""
+            class="side-icons"
+          />
+        </div>
+        <div class="icon-nav">
+          <img
+            src="/inspection/assets/images/icon4.svg"
+            alt=""
+            class="side-icons"
+          />
+        </div>
+        <div class="icon-nav">
+          <img
+            src="/inspection/assets/images/icon5.svg"
+            alt=""
+            class="side-icons"
+          />
+        </div>
+        <div class="icon-nav">
+          <img
+            src="/inspection/assets/images/icon6.svg"
+            alt=""
+            class="side-icons"
+          />
+        </div>
+      </div>
+
+      <div class="inner-sidebar">
+        <!-- <button id="close-btn" class="close-btn">X</button> -->
+        <div class="logo">
+          <a href="/dashboard/index.html"><img
+            src="/inspection/assets/images/logo.svg"
+            alt="Leadway Assurance"
+          /></a>
+        </div>
+        <h2 class="trm">TRM</h2>
+        <ul>
+          <li>
+            <a href="" id="overview-btn">
+              <img
+                src="/inspection/assets/images/overview.svg"
+                alt=""
+              />Overview</a
+            >
+          </li>
+          <li>
+            <a href="" id="request-btn">
+              <img
+                src="/inspection/assets/images/request.svg"
+                alt=""
+              />Request</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+          
+    <div class="main-content">
+      <div class="top-nav">
+        <div>
+            <!-- Hamburger Menu Icon -->
+            <button id="menu-btn" class="menu-btn">&#9776;</button>
+          <img src="/inspection/assets/images/bell.svg" class="bell" alt="" />
+          <div class="avatar">
+            <h2>AM</h2>
+          </div>
+          <div class="account-info">
+            <p>Adesola</p>
+            <img
+              src="/inspection/assets/images/arrow.svg"
+              class="arrow"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      
+      <header>
+        <div class="head-span">
+          <h1 class="head-welcome">Rovenheight Properties</h1>
+          <p class="txt-para">See inspection request details</p>
+        </div>
+      </header>
+      <!-- new section -->
+      <div class="content-container">
+        <div class="first-side">
+          <img src="/ongoing/assets/images/pix.svg" alt="" />
+          <h2>Goodnes Ibeneme</h2>
+          <p class="insp-sub">Inspection Status: <span>ongoing</span></p>
+          <p>Claim Number <span>ASD12358493</span></p>
+          <p>Policy Number <span>MTR12358493</span></p>
+          <p>Commencement Date <span>31 MAY 2022</span></p>
+          <p>Sum Assured(N)<span>1,000,000</span></p>
+          <p>Premium (N) <span>10,000</span></p>
+          <p>Vehicle Type <span>Car</span></p>
+          <p>Policy Term(Years) <span>5</span></p>
+          <p>Expiry Date <span>19 Dec. 2024</span></p>
+          <p>Damage Year <span>Interior (engine)</span></p>
+        </div>
+
+          <div class="timeline-section">
+            <div class="line">
+                <div class="timeline-dot-1"></div>
+                <div class="timeline-dot-2"></div>
+            </div>
+            <div class="timeline">
+                <p class="date">25 Jan, 2023 9:39 AM</p>
+                <div class="timeline-item active" id="item1">
+                    <div class="timeline-content">
+                        <div class="icons">
+                            <img
+                                src="/ongoing/assets/images/note.svg"
+                                alt="icon"
+                            />
+                            <div class="tag"></div>
+                        </div>
+                        <div class="title-container">
+                            <p class="title">
+                                You created request for Post Loss
+                                Inspection
+                            </p>
+                            <span>Leadway Assurance</span>
+                            <p class="sub-title">Documents submitted</p>
+                        </div>
+                        <button class="view-request view-request-btn" id="view-request">
+                            View request
+                        </button>
+                    </div>
+                </div>
+                <p class="date date-2">25 Jan, 2023 9:39 AM</p>
+                <div class="timeline-item" id="item1">
+                    <div class="timeline-content">
+                        <div class="icons">
+                            <img
+                                src="/ongoing/assets/images/note.svg"
+                                alt="icon"
+                            />
+                            <div class="tag tag-2"></div>
+                        </div>
+                        <div class="title-container">
+                            <p class="title">Request Assigned</p>
+                            <span>Leadway Assurance</span>
+                            <p class="sub-title">
+                                Assigned to
+                                <span>Engineer </span>Olaniyi
+                            </p>
+                        </div>
+                        <button class="view-request view-request-2">
+                            Re-Assign
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <script>
+                     document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const sidebar = document.querySelector(".sidebar");
+    const mainContent = document.querySelector(".main-content");
+
+    menuBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+    });
+});
+    </script>
+    <script src="/ongoing/js/scripts.js"></script>
+  </body>
+
+</html>

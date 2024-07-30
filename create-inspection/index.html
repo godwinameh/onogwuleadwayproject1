@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create Inspection</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <!-- <link rel="stylesheet" href="/inspection/css/styles.css" /> -->
+        <link rel="stylesheet"href="/create-inspection/css/create-inspection.css"/>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="nav-icons">
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon1.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon2.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon3.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon4.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon5.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon6.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+            </div>
+            <div class="inner-sidebar">
+                <div class="logo">
+                    <img
+                        src="/inspection/assets/images/logo.svg"
+                        alt="Leadway Assurance"
+                    />
+                </div>
+                <h2 class="trm">TRM</h2>
+                <ul>
+                    <li>
+                        <a href="" id="overview-btn">
+                            <img
+                                src="/inspection/assets/images/overview.svg"
+                                alt=""
+                            />Overview</a
+                        >
+                    </li>
+                    <li>
+                        <a href="" id="request-btn">
+                            <img
+                                src="/inspection/assets/images/request.svg"
+                                alt=""
+                            />Request</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-nav">
+                <div>
+                    <img
+                        src="/inspection/assets/images/bell.svg"
+                        class="bell"
+                        alt=""
+                    />
+                    <div class="avatar">
+                        <h2>AM</h2>
+                    </div>
+                    <div class="account-info">
+                        <p>Adesola</p>
+                        <img
+                            src="/inspection/assets/images/arrow.svg"
+                            class="arrow"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <header>
+                <div class="head-span">
+                    <h1 class="head-welcome">Inspection List</h1>
+                    <p class="txt-para">
+                        See inspection accross all business classes
+                    </p>
+                </div>
+                <button class="close-btn" id="close-btn">
+                    <img
+                        src="/create-inspection/assets/images/close-btn.svg"
+                        alt=""
+                    />
+                </button>
+            </header>
+
+            <div class="main-container">
+                <div class="box-cont">
+                    <button id="pre-loss-btn">
+                        <img
+                            src="/create-inspection/assets/images/pre-loss.svg"
+                            alt=""
+                        />
+                        <p>Pre-loss Inspection</p>
+                    </button>
+                    <button id="post-loss-btn">
+                        <img
+                            src="/create-inspection/assets/images/post-loss.svg"
+                            alt=""
+                        />
+                        <p>Post-loss Inspection</p>
+                    </button>
+                </div>
+                <p>Choose a class</p>
+                <form action="POST">
+                    <div class="custom-select">
+                        <div class="select-selected">
+                            <img
+                                src="/create-inspection/assets/images/blu-dot.svg"
+                                alt="Icon 1"
+                            />
+                            &nbsp;Property
+                            <div class="select-arrow"></div>
+                        </div>
+                        <div class="select-items select-hide">
+                            <div class="select-item" data-value="option1">
+                                <img
+                                    src="/create-inspection/assets/images/blu-dot.svg"
+                                    alt="Icon 1"
+                                />
+                                &nbsp; Enginnering
+                            </div>
+                            <div class="select-item" data-value="option2">
+                                <img
+                                    src="/create-inspection/assets/images/blu-dot.svg"
+                                    alt="Icon 2"
+                                />
+                                &nbsp; Store
+                            </div>
+                            <div class="select-item" data-value="option3">
+                                <img
+                                    src="/create-inspection/assets/images/blu-dot.svg"
+                                    alt="Icon 3"
+                                />
+                                &nbsp; Property
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="btn-span">
+                    <button class="create-req" id="create-request">
+                        <img
+                            src="/create-inspection/assets/images/forward-arrow.svg"
+                            alt=""
+                        />Create Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/create-inspection/js/create-inspection.js"></script>
+</html>

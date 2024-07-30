@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Survey Report</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <!-- <link rel="stylesheet" href="/inspection/css/styles.css" /> -->
+        <link rel="stylesheet" href="/survey-report/css/survey-report.css" />
+        <style>
+            body {
+font-family: 'Mulish', sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.sidebar {
+width: 250px;
+background-color: #333;
+color: #fff;
+height: 100vh;
+position: fixed;
+left: 0;
+top: 0;
+overflow: auto;
+transition: transform 0.3s ease-in-out;
+}
+
+.main-content {
+margin-left: 250px;
+padding: 20px;
+flex: 1;
+transition: margin-left 0.3s ease-in-out;
+}
+.top-nav{
+    position: fixed;
+    top: 0;
+    /* left: 250px; */
+    right: 0;
+    /* background-color: #ffdebf; */
+    z-index: 1000;
+    padding: 10px 20px;
+
+}
+
+.menu-btn {
+display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+.sidebar {
+transform: translateX(-100%);
+}
+
+.main-content {
+margin-left: 0;
+}
+
+.menu-btn {
+display: inline-block;
+position: fixed;
+top: 15px;
+left: 15px;
+background: #333;
+color: #fff;
+border: none;
+font-size: 20px;
+padding: 10px 15px;
+cursor: pointer;
+}
+
+.sidebar.active {
+transform: translateX(0);
+}
+ }       </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="nav-icons">
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon1.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon2.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon3.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon4.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon5.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+                <div class="icon-nav">
+                    <img
+                        src="/inspection/assets/images/icon6.svg"
+                        alt=""
+                        class="side-icons"
+                    />
+                </div>
+            </div>
+            <div class="inner-sidebar">
+                <div class="logo">
+                    <a href="/dashboard/index.html"><img
+                        src="/inspection/assets/images/logo.svg"
+                        alt="Leadway Assurance"
+                    /></a>
+                </div>
+                <h2 class="trm">TRM</h2>
+                <ul>
+                    <li>
+                        <a href="" id="overview-btn">
+                            <img
+                                src="/inspection/assets/images/overview.svg"
+                                alt=""
+                            />Overview
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="request-btn">
+                            <img
+                                src="/inspection/assets/images/request.svg"
+                                alt=""
+                            />Request
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="top-nav">
+                <!-- hamburger menu -->
+            <button id="menu-btn" class="menu-btn">&#9776;</button>
+                <div>
+                    <img
+                        src="/inspection/assets/images/bell.svg"
+                        class="bell"
+                        alt=""
+                    />
+                    <div class="avatar">
+                        <h2>AM</h2>
+                    </div>
+                    <div class="account-info">
+                        <p>Adesola</p>
+                        <img
+                            src="/inspection/assets/images/arrow.svg"
+                            class="arrow"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <header>
+                <div class="head-span">
+                    <h1 class="head-welcome">Inspection List</h1>
+                    <p class="txt-para">
+                        See inspection across all business classes
+                    </p>
+                </div>
+                <button class="inspection-btn" id="inspection-btn">
+                    + &nbsp; Create New Inspection
+                </button>
+            </header>
+
+            <div class="survey-report-container">
+                <div class="property-details">
+                    <div class="property-header">
+                        <div class="property-image">
+                            <img
+                                src="/survey-report/assets/images/property.jpg"
+                                alt="Property Image"
+                            />
+                            <div class="property-dot-container">
+                                <div class="property-dot"></div>
+                                <p>Property</p>
+                            </div>
+                        </div>
+                        <div class="property-info">
+                            <h2>Rovenheights Properties LTD.</h2>
+                            <div class="info-item-container">
+                                <div class="info-item">
+                                    <p class="label">Policy Number:</p>
+                                    <p class="value">ALR12356483</p>
+                                </div>
+                                <div class="info-item">
+                                    <p class="label">Loss Type:</p>
+                                    <p class="value">Non-Motor</p>
+                                </div>
+                                <div class="info-item">
+                                    <p class="label">Policy Term (Years):</p>
+                                    <p class="value">5</p>
+                                </div>
+                                <div class="info-item">
+                                    <p class="label">Expiry Date:</p>
+                                    <p class="value">19 Dec. 2024</p>
+                                </div>
+                                <div class="info-item">
+                                    <p class="label">Commencement Date:</p>
+                                    <p class="value">19 Dec. 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="policy-progress">
+                        <p>3 Days to Expiry</p>
+                    </div> -->
+                        <div class="progress-container">
+                            <div class="progress-text">Policy Progress</div>
+                            <div class="progress-circle">
+                                <svg
+                                    viewBox="0 0 36 36"
+                                    class="circular-chart orange"
+                                >
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                                         a 15.9155 15.9155 0 0 1 0 31.831
+                                         a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="67, 100"
+                                        d="M18 2.0845
+                                         a 15.9155 15.9155 0 0 1 0 31.831
+                                         a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <g class="percentage-container">
+                                        <circle
+                                            cx="18"
+                                            cy="18"
+                                            r="10"
+                                            class="percentage-bg"
+                                        />
+                                        <text
+                                            x="18"
+                                            y="20.35"
+                                            class="percentage"
+                                        >
+                                            67%
+                                        </text>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <div class="progress-days">3 Days to Expiry</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insured-details">
+                    <h3>Insured Details</h3>
+                    <div class="survey-tabs">
+                        <button
+                            class="survey-tab active"
+                            onclick="openPropertyTab(event, 'property-information')"
+                        >
+                            Property Information
+                        </button>
+                        <button
+                            class="survey-tab"
+                            onclick="openPropertyTab(event, 'property-description-2')"
+                        >
+                            Property Description
+                        </button>
+                        <button
+                            class="survey-tab"
+                            onclick="openPropertyTab(event, 'supporting-document')"
+                        >
+                            Supporting Document
+                        </button>
+                    </div>
+                    <div
+                        id="property-information"
+                        class="survey-tab-content active"
+                    >
+                        <div class="survey-tab-content-grid">
+                            <div class="info-item">
+                                <p>Insured for:</p>
+                                <p>Rovenheight Homes</p>
+                            </div>
+                            <div class="info-item">
+                                <p>Insured Name:</p>
+                                <p>Rovenheight Homes</p>
+                            </div>
+                            <div class="info-item">
+                                <p>Loss estimate:</p>
+                                <p>₦1,200,000</p>
+                            </div>
+                            <div class="info-item">
+                                <p>Cause of Loss:</p>
+                                <p>Rovenheight Homes</p>
+                            </div>
+                            <div class="info-item">
+                                <p>Cause of Loss:</p>
+                                <p>Rovenheight Homes</p>
+                            </div>
+                            <div class="info-item span-2">
+                                <p>Property Address:</p>
+                                <p>
+                                    No. 36, Rovenheight Homes, Nicon town, Lekki
+                                    phase 1, Lagos.
+                                </p>
+                            </div>
+                            <div class="info-item">
+                                <p>City:</p>
+                                <p>Lekki</p>
+                            </div>
+                            <div class="info-item">
+                                <p>State:</p>
+                                <p>Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="property-description-2" class="survey-tab-content">
+                        <p class="para">
+                            Rovenheight homes registered as a LLC building on
+                            the 15th of May 2016 is a Grey and White twelve
+                            storey building located at No 12 OGUNSANYA DRIVE,
+                            ALCOVE ESTATE, LEKKI PHASE 1, LAGOS STATE. The
+                            property is owned by Mr. Badmus Akinrele who stands
+                            as the insurer of the property.
+                        </p>
+                    </div>
+                    <div id="supporting-document" class="survey-tab-content">
+                        <div class="support-content">
+                            <p class="first-para">Policy document</p>
+                            <div class="support-content-left">
+                                <p class="time">25 Aug, 2022 9:00 AM</p>
+                                <div class="eye-container">
+                                    <button>
+                                        <img
+                                            src="/survey-report/assets/images/eye.svg"
+                                            alt="eye icon"
+                                        />
+                                    </button>
+                                    <p>View</p>
+                                    <button>Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="support-content">
+                            <p class="first-para">Police Report</p>
+                            <div class="support-content-left">
+                                <p class="time">25 Aug, 2022 9:00 AM</p>
+                                <div class="eye-container">
+                                    <button>
+                                        <img
+                                            src="/survey-report/assets/images/eye.svg"
+                                            alt="eye icon"
+                                        />
+                                    </button>
+                                    <p>View</p>
+                                    <button>Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="support-content">
+                            <p class="first-para">Attached Document 1</p>
+                            <div class="support-content-left">
+                                <p class="time">25 Aug, 2022 9:00 AM</p>
+                                <div class="eye-container">
+                                    <button>
+                                        <img
+                                            src="/survey-report/assets/images/eye.svg"
+                                            alt="eye icon"
+                                        />
+                                    </button>
+                                    <p>View</p>
+                                    <button>Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const sidebar = document.querySelector(".sidebar");
+    const mainContent = document.querySelector(".main-content");
+
+    menuBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+    });
+});
+            </script>
+        <script src="/survey-report/js/scripts.js"></script>
+    </body>
+</html>
